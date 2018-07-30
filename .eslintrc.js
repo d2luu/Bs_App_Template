@@ -1,7 +1,4 @@
 module.exports = {
-  "ecmaFeatures": {
-    "jsx": true
-  },
   'extends': 'airbnb',
   'plugins': [
     'react',
