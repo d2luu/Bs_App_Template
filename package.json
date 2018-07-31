@@ -6,10 +6,15 @@
     "prepush": "npm run lint",
     "postinstall": "rm -rf .git/hooks/pre-push && node node_modules/husky/bin/install.js && rm -rf .git/hooks/pre-commit",
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest",
+    "ios": "react-native run-ios",
+    "android": "cd android && ./gradlew clean && cd .. && react-native run-android",
     "lint-init": "eslint --init",
     "lint": "eslint src/",
-    "lint:fix": "eslint src/ --fix"
+    "lint:fix": "eslint src/ --fix",
+    "test": "jest --verbose --coverage",
+    "test:update": "jest --verbose --coverage --updateSnapshot",
+    "test:watch": "jest --verbose --watch",
+    "coverage": "jest --verbose --coverage && open ./coverage/lcov-report/index.html"
   },
   "dependencies": {
     "lodash": "^4.17.10",
@@ -33,6 +38,18 @@
     "react-test-renderer": "16.4.1"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "cacheDirectory": "./cache",
+    "coveragePathIgnorePatterns": [
+      "./src/utils/vendor"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 75
+      }
+    },
+    "transformIgnorePatterns": [
+      "/node_modules/(?!react-native|react-clone-referenced-element|react-navigation)"
+    ]
   }
 }
