@@ -13,5 +13,6 @@ module.exports = {
     'react/prop-types': 2,
     'react/jsx-no-bind': 2,
     'react/jsx-no-duplicate-props': 2,
+    'react/jsx-filename-extension': [1, {'extensions': ['.js', '.jsx']}],
   },
 };

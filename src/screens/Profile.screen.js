@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import ProfileComponent from '../components/Profile/Profile.component';
 
 class ProfileScreen extends Component {
