@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import SignInStack from '../navigation/signin.navigation';
 
 class SignInScreen extends Component {

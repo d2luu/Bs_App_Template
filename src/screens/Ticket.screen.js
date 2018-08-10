@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import TicketComponent from '../components/Ticket/Ticket.component';
 
 class TicketScreen extends Component {

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import SettingComponent from '../components/Setting/Setting.component';
 
 class SettingScreen extends Component {
