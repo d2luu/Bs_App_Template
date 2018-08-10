@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
+import PropTypes from 'prop-types';
 import { Button } from 'react-native-elements';
 import styles from './Common.style';
 
@@ -20,5 +21,11 @@ const SignIn = props => (
     />
   </View>
 );
+
+SignIn.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func.isRequired,
+  }).isRequired,
+};
 
 export default SignIn;

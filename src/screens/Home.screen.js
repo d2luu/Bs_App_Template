@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import HomeComponent from '../components/Home/Home.component';
 
 class HomeScreen extends Component {
